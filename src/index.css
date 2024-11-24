@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-gray-900 bg-gray-100;
+  }
+}
+
+@layer components {
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  textarea,
+  select {
+    @apply mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500;
+  }
+}
+
+@media print {
+  .page-break-inside-avoid {
+    page-break-inside: avoid;
+  }
+  
+  .page-break-before-always {
+    page-break-before: always;
+  }
+  
+  @page {
+    margin: 2cm;
+    size: A4;
+  }
+}
